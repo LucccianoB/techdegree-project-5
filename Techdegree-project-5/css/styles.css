@@ -16,15 +16,16 @@ header {
     border: 2px darkgrey solid;
     border-radius: 5px;
     margin: 0 auto;
-    padding: .5em;
     width: 30em;
-    height: 2em;
+    height: 3em;
 }
 
 input {
     border: none;
     outline: none;
+    padding: .5em;
     height: 100%;
+    width: 100%;
 }
 
 input[type="search"]::-webkit-search-cancel-button {
