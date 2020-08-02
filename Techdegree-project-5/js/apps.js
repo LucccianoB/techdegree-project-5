@@ -7,13 +7,13 @@ baguetteBox.run('.gallery', {
 
 //variables
 
-let searchinput = document.getElementById("imsearch").toLowerCase();
+const searchbox = document.querySelector(".searchbox");
+let searchinput = '';
 const gallery = document.querySelector(".gallery");
 let ammount = gallery.getElementsByClassName("gallery-photos");
-let searchinput = '';
 let photocaption;
 
-function searchbox(searchinput) {
+function search(searchinput) {
 
     for (i= 0; i < ammount.length; i++ ) {
 
@@ -22,11 +22,13 @@ function searchbox(searchinput) {
         if(!photocaption.includes(searchinput)) {
             ammount[i].style.display = "none";
         } else {
-            photos[i].style.display = "";
+            ammount[i].style.display = "";
         }
     }
 
 }
 
-
+searchbox.addEventListener('keyup', function() {
+    search(searchbox.value.toLowerCase());
+});
 
